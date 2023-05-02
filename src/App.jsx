@@ -26,8 +26,8 @@ function App() {
     <>
       <div className="h-screen w-screen grid place-items-center">
         {resultToggle && <ResultModal json={jsonBackend} toggle={setResultToggle} />}
-        <div className="flex justify-evenly items-center w-[100%] ">
-          <div className="h-[100vh] w-[45vw] bg-red grid place-items-center">
+        <div className="flex justify-evenly items-center w-[100%] flex-col  gap-10 sm:flex-row ">
+          <div className="h-[100vh] w-[fit] px-10 bg-red grid place-items-center">
             <Editor
               value={uiSchemaString}
               handler={handlePreview}

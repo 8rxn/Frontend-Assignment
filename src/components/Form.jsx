@@ -219,11 +219,11 @@ const Form = ({
   return (
     <form onSubmit={handleSubmit} className="bg-white/20 p-6 rounded-2xl text-lg font-semibold">
       <h2 className="w-full border-b-2 border-gray-500 mb-3 font-bold text-xl ">New Form</h2>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col md:gap-4 gap-2 ">
       {schema?.map((field) => renderField(field))}
       </div>
-      <div className="flex justify-between w-[40vw] ">
-      <div className="flex items-center">
+      <div className="flex justify-between lg:flex-row flex-col gap-2 w-[40vw] ">
+      <div className="flex items-center ">
       <Checkbox>Show Advanced Fields</Checkbox>
       </div>
       <div className="flex gap-4">
@@ -233,7 +233,7 @@ const Form = ({
       >
         Cancel
       </button>
-        <button type="submit" className="rounded-lg py-1 px-5 bg-gray-700 font-semibold">Submit</button>
+        <button type="submit" className="rounded-lg py-1 lg:py-1 lg:px-5 px-2 bg-gray-700 font-semibold">Submit</button>
       </div>
 
       </div>
