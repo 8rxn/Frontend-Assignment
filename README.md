@@ -30,6 +30,8 @@ To run this project on your local machine, follow the steps below:
 3. On the right-hand side of the screen, you will see a preview of the rendered form based on the UI-Schema.
 4. You can make changes to the UI-Schema and see the changes reflected in the rendered form.
 
+[https://asset.cloudinary.com/dlpvfuhpn/0848a40334f01f16869b119d573a80cc] Explanation
+
 [Example UI Schema](https://drive.google.com/file/d/19_E6dSDUbiDR31wNSSvUARHxh1HeT6L4/view)  - Pizza Schema
 
 ## Built With
@@ -58,6 +60,8 @@ The component returns a `div` that contains two child elements:
 - Finally, the `Editor` component is exported as a default export to be used in other parts of the application.
 
 ### Explanation for Form Component
+
+
 
 This React code defines a component called `Form` that is used to render a dynamic form based on a JSON schema. The form is rendered on the right side of a UI.
 
