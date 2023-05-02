@@ -54,12 +54,29 @@ The component returns a `div` that contains two child elements:
 - A `div` element containing the heading "Enter Your JSON Schema Here:" and a `textarea` element where the user can enter the JSON schema.
 - A `button` element that triggers the `handler` function when clicked.
 
-The `textarea` element is styled using tailwind CSS classes. It has a default value of the pasta schema and can be updated by the user. The updated JSON schema is passed to the parent component using the `setUiSchemaString` function.
+- The `textarea` element is styled using tailwind CSS classes. It has a default value of the pasta schema and can be updated by the user. The updated JSON schema is passed to the parent component using the `setUiSchemaString` function.
 
-Finally, the `Editor` component is exported as a default export to be used in other parts of the application.
+- Finally, the `Editor` component is exported as a default export to be used in other parts of the application.
+
+### This React code defines a component called `Form` that is used to render a dynamic form based on a JSON schema. The form is rendered on the right side of a UI.
+
+The `Form` component receives several props, including `schema`, `formData`, `setFormData`, `currentTab`, `setCurrentTab`, `advanced`, `setResultToggle`, `setAdvanced`, and `setJsonBackend`. These props are used throughout the code to handle various aspects of the form's functionality.
+
+The `Form` component defines several functions, including `handleSubmit`, `filterFormData`, `handleSwitchChange`, `handleChange`, and `renderField`. 
+
+- The `Form` component renders a dynamic form based on the `schema` prop. It maps through the `schema` array and calls the `renderField` function to render each field. The `Form` component also passes the `handleSwitchChange` and `handleChange` functions as props to the child components.
 
 
+- The `handleSubmit` function is called when the form is submitted. It prevents the default form submission, sets the `jsonBackend` state to the current form data, and sets the `resultToggle` state to `true`. This will display a modal that contains the Data that is sent to the backend
 
+- The `handleSwitchChange` function is called when a switch component is toggled. It updates the `formData` state by setting the value of the toggled switch.
+
+- The `handleChange` function is called when an input component's value changes. It updates the `formData` state based on the changed value.
+
+- The `renderField` function is used to render each field in the JSON schema. It checks the `uiType` property of each field and renders the corresponding component, including `Input`, `Group`, `Select`, and `Radio`. The `renderField` function recursively calls itself to render nested fields. The function also checks if the `advanced` property is set for a group field and shows or hides the advanced options based on the toggle. The `ignore` parameter is a list of current level `uiType` `ignore` field which are to be deleted form `formData` everytime a field of another tab of the same level is clicked. 
+
+### ResultModal Component
+The ResultModal component is a modal that displays the JSON file that would be sent to the backend on Click of the submit button.
 
 ## License
 
