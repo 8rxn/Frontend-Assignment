@@ -58,7 +58,9 @@ The component returns a `div` that contains two child elements:
 
 - Finally, the `Editor` component is exported as a default export to be used in other parts of the application.
 
-### This React code defines a component called `Form` that is used to render a dynamic form based on a JSON schema. The form is rendered on the right side of a UI.
+### Explanation for Form Component
+
+This React code defines a component called `Form` that is used to render a dynamic form based on a JSON schema. The form is rendered on the right side of a UI.
 
 The `Form` component receives several props, including `schema`, `formData`, `setFormData`, `currentTab`, `setCurrentTab`, `advanced`, `setResultToggle`, `setAdvanced`, and `setJsonBackend`. These props are used throughout the code to handle various aspects of the form's functionality.
 
