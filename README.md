@@ -75,7 +75,7 @@ The `Form` component defines several functions, including `handleSubmit`, `filte
 
 - The `handleChange` function is called when an input component's value changes. It updates the `formData` state based on the changed value.
 
-- The `renderField` function is used to render each field in the JSON schema. It checks the `uiType` property of each field and renders the corresponding component, including `Input`, `Group`, `Select`, and `Radio`. The `renderField` function recursively calls itself to render nested fields. The function also checks if the `advanced` property is set for a group field and shows or hides the advanced options based on the toggle. The `ignore` parameter is a list of current level `uiType` `ignore` field which are to be deleted form `formData` everytime a field of another tab of the same level is clicked. 
+- The `renderField` function is used to render each field in the JSON schema. It checks the `uiType` property of each field and renders the corresponding component, including `Input`, `Group`, `Select`, and `Radio`. The `renderField` function recursively calls itself to render nested fields. The function also checks if the `advanced` property is set for a group field and shows or hides the advanced options based on the toggle. The `ignore` parameter is a list of current level `uiType` `ignore` fields whose value is to be deleted and re added for a Tab into the `formData` everytime a field of another tab of the same level is clicked. 
 
 ### ResultModal Component
 The ResultModal component is a modal that displays the JSON file that would be sent to the backend on Click of the submit button.
